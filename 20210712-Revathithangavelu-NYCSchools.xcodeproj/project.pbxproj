@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F840075A269D4BD200771177 /* SchoolData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8400759269D4BD200771177 /* SchoolData.swift */; };
+		F840075D269D4C0700771177 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = F840075C269D4C0700771177 /* School.swift */; };
+		F8400760269D4CC100771177 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F840075F269D4CC100771177 /* Constants.swift */; };
+		F8400764269D5F8100771177 /* SchoolListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8400762269D5F8100771177 /* SchoolListTableViewCell.swift */; };
+		F8400765269D5F8100771177 /* SchoolListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8400763269D5F8100771177 /* SchoolListTableViewCell.xib */; };
+		F8400768269D685E00771177 /* SchoolDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8400767269D685E00771177 /* SchoolDetailsViewController.swift */; };
+		F840076B269E0F7800771177 /* SATScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F840076A269E0F7800771177 /* SATScore.swift */; };
 		F8883587269D2DC500AA3ABC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8883586269D2DC500AA3ABC /* AppDelegate.swift */; };
 		F8883589269D2DC500AA3ABC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8883588269D2DC500AA3ABC /* SceneDelegate.swift */; };
 		F888358E269D2DC500AA3ABC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F888358C269D2DC500AA3ABC /* Main.storyboard */; };
@@ -15,9 +22,17 @@
 		F8883596269D2DC800AA3ABC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8883594269D2DC800AA3ABC /* LaunchScreen.storyboard */; };
 		F88835A0269D2EC300AA3ABC /* SchoolListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F888359F269D2EC300AA3ABC /* SchoolListViewController.swift */; };
 		F88835A3269D2ED800AA3ABC /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88835A2269D2ED800AA3ABC /* FavoritesViewController.swift */; };
+		F88835AB269D48B700AA3ABC /* SchoolDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88835AA269D48B700AA3ABC /* SchoolDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F8400759269D4BD200771177 /* SchoolData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolData.swift; sourceTree = "<group>"; };
+		F840075C269D4C0700771177 /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		F840075F269D4CC100771177 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F8400762269D5F8100771177 /* SchoolListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListTableViewCell.swift; sourceTree = "<group>"; };
+		F8400763269D5F8100771177 /* SchoolListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolListTableViewCell.xib; sourceTree = "<group>"; };
+		F8400767269D685E00771177 /* SchoolDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailsViewController.swift; sourceTree = "<group>"; };
+		F840076A269E0F7800771177 /* SATScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SATScore.swift; sourceTree = "<group>"; };
 		F8883583269D2DC500AA3ABC /* 20210712-Revathithangavelu-NYCSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20210712-Revathithangavelu-NYCSchools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8883586269D2DC500AA3ABC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8883588269D2DC500AA3ABC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +43,7 @@
 		F8883597269D2DC800AA3ABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F888359F269D2EC300AA3ABC /* SchoolListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListViewController.swift; sourceTree = "<group>"; };
 		F88835A2269D2ED800AA3ABC /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		F88835AA269D48B700AA3ABC /* SchoolDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +85,7 @@
 				F8883594269D2DC800AA3ABC /* LaunchScreen.storyboard */,
 				F8883597269D2DC800AA3ABC /* Info.plist */,
 				F888358F269D2DC500AA3ABC /* _0210712_Revathithangavelu_NYCSchools.xcdatamodeld */,
+				F840075F269D4CC100771177 /* Constants.swift */,
 			);
 			path = "20210712-Revathithangavelu-NYCSchools";
 			sourceTree = "<group>";
@@ -77,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				F888358C269D2DC500AA3ABC /* Main.storyboard */,
+				F8400762269D5F8100771177 /* SchoolListTableViewCell.swift */,
+				F8400763269D5F8100771177 /* SchoolListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -86,6 +105,7 @@
 			children = (
 				F888359F269D2EC300AA3ABC /* SchoolListViewController.swift */,
 				F88835A2269D2ED800AA3ABC /* FavoritesViewController.swift */,
+				F8400767269D685E00771177 /* SchoolDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -93,6 +113,10 @@
 		F88835A6269D2EE700AA3ABC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F88835AA269D48B700AA3ABC /* SchoolDataManager.swift */,
+				F8400759269D4BD200771177 /* SchoolData.swift */,
+				F840075C269D4C0700771177 /* School.swift */,
+				F840076A269E0F7800771177 /* SATScore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,6 +181,7 @@
 				F8883596269D2DC800AA3ABC /* LaunchScreen.storyboard in Resources */,
 				F8883593269D2DC800AA3ABC /* Assets.xcassets in Resources */,
 				F888358E269D2DC500AA3ABC /* Main.storyboard in Resources */,
+				F8400765269D5F8100771177 /* SchoolListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,10 +193,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8883587269D2DC500AA3ABC /* AppDelegate.swift in Sources */,
+				F88835AB269D48B700AA3ABC /* SchoolDataManager.swift in Sources */,
+				F840075A269D4BD200771177 /* SchoolData.swift in Sources */,
 				F8883589269D2DC500AA3ABC /* SceneDelegate.swift in Sources */,
 				F8883591269D2DC500AA3ABC /* _0210712_Revathithangavelu_NYCSchools.xcdatamodeld in Sources */,
 				F88835A3269D2ED800AA3ABC /* FavoritesViewController.swift in Sources */,
+				F8400768269D685E00771177 /* SchoolDetailsViewController.swift in Sources */,
 				F88835A0269D2EC300AA3ABC /* SchoolListViewController.swift in Sources */,
+				F8400764269D5F8100771177 /* SchoolListTableViewCell.swift in Sources */,
+				F840076B269E0F7800771177 /* SATScore.swift in Sources */,
+				F840075D269D4C0700771177 /* School.swift in Sources */,
+				F8400760269D4CC100771177 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
