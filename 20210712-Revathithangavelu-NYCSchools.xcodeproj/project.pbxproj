@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		F8883587269D2DC500AA3ABC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8883586269D2DC500AA3ABC /* AppDelegate.swift */; };
 		F8883589269D2DC500AA3ABC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8883588269D2DC500AA3ABC /* SceneDelegate.swift */; };
-		F888358B269D2DC500AA3ABC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F888358A269D2DC500AA3ABC /* ViewController.swift */; };
 		F888358E269D2DC500AA3ABC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F888358C269D2DC500AA3ABC /* Main.storyboard */; };
 		F8883591269D2DC500AA3ABC /* _0210712_Revathithangavelu_NYCSchools.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F888358F269D2DC500AA3ABC /* _0210712_Revathithangavelu_NYCSchools.xcdatamodeld */; };
 		F8883593269D2DC800AA3ABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8883592269D2DC800AA3ABC /* Assets.xcassets */; };
 		F8883596269D2DC800AA3ABC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8883594269D2DC800AA3ABC /* LaunchScreen.storyboard */; };
+		F88835A0269D2EC300AA3ABC /* SchoolListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F888359F269D2EC300AA3ABC /* SchoolListViewController.swift */; };
+		F88835A3269D2ED800AA3ABC /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88835A2269D2ED800AA3ABC /* FavoritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F8883583269D2DC500AA3ABC /* 20210712-Revathithangavelu-NYCSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20210712-Revathithangavelu-NYCSchools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8883586269D2DC500AA3ABC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8883588269D2DC500AA3ABC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F888358A269D2DC500AA3ABC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F888358D269D2DC500AA3ABC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8883590269D2DC500AA3ABC /* _0210712_Revathithangavelu_NYCSchools.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _0210712_Revathithangavelu_NYCSchools.xcdatamodel; sourceTree = "<group>"; };
 		F8883592269D2DC800AA3ABC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8883595269D2DC800AA3ABC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8883597269D2DC800AA3ABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F888359F269D2EC300AA3ABC /* SchoolListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListViewController.swift; sourceTree = "<group>"; };
+		F88835A2269D2ED800AA3ABC /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,41 @@
 		F8883585269D2DC500AA3ABC /* 20210712-Revathithangavelu-NYCSchools */ = {
 			isa = PBXGroup;
 			children = (
+				F88835A6269D2EE700AA3ABC /* Model */,
+				F88835A5269D2EDF00AA3ABC /* Controller */,
+				F888359E269D2EA000AA3ABC /* View */,
 				F8883586269D2DC500AA3ABC /* AppDelegate.swift */,
 				F8883588269D2DC500AA3ABC /* SceneDelegate.swift */,
-				F888358A269D2DC500AA3ABC /* ViewController.swift */,
-				F888358C269D2DC500AA3ABC /* Main.storyboard */,
 				F8883592269D2DC800AA3ABC /* Assets.xcassets */,
 				F8883594269D2DC800AA3ABC /* LaunchScreen.storyboard */,
 				F8883597269D2DC800AA3ABC /* Info.plist */,
 				F888358F269D2DC500AA3ABC /* _0210712_Revathithangavelu_NYCSchools.xcdatamodeld */,
 			);
 			path = "20210712-Revathithangavelu-NYCSchools";
+			sourceTree = "<group>";
+		};
+		F888359E269D2EA000AA3ABC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F888358C269D2DC500AA3ABC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F88835A5269D2EDF00AA3ABC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F888359F269D2EC300AA3ABC /* SchoolListViewController.swift */,
+				F88835A2269D2ED800AA3ABC /* FavoritesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F88835A6269D2EE700AA3ABC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,10 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F888358B269D2DC500AA3ABC /* ViewController.swift in Sources */,
 				F8883587269D2DC500AA3ABC /* AppDelegate.swift in Sources */,
 				F8883589269D2DC500AA3ABC /* SceneDelegate.swift in Sources */,
 				F8883591269D2DC500AA3ABC /* _0210712_Revathithangavelu_NYCSchools.xcdatamodeld in Sources */,
+				F88835A3269D2ED800AA3ABC /* FavoritesViewController.swift in Sources */,
+				F88835A0269D2EC300AA3ABC /* SchoolListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
