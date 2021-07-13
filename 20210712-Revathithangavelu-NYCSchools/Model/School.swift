@@ -18,4 +18,5 @@ struct School {
     var reading_avg_score: String?
     var math_avg_score: String?
     var writing_avg_score: String?
+    var favorite = false
 }

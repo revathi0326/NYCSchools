@@ -21,6 +21,7 @@ class SchoolDetailsViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     
     @IBOutlet weak var overViewLabel: UILabel!
+    @IBOutlet weak var favoriteBarButton: UIBarButtonItem!
     
     var school: School?
     var schoolDataManager: SchoolDataManager = SchoolDataManager()
@@ -62,10 +63,26 @@ class SchoolDetailsViewController: UIViewController {
         overViewLabel.text = school?.overview
         phoneNumberLabel.text = school?.phoneNumber
         emailLabel.text = school?.email
+        if school?.favorite  == true{
+            favoriteBarButton.image = UIImage(systemName: "star.fill")
+        }else{
+            favoriteBarButton.image = UIImage(systemName: "star")
+        }
     }
     
     func loadSATScoreDetails(){
         schoolDataManager.fetchSATScoreDetailsForSchool(school!)
+    }
+    
+    @IBAction func addSchoolToFavorites(_ barButtonItem:UIBarButtonItem) {
+        print("add to favorites")
+        if school?.favorite  == true{
+            favoriteBarButton.image = UIImage(systemName: "star")
+            school?.favorite = false
+        }else{
+            favoriteBarButton.image = UIImage(systemName: "star.fill")
+            school?.favorite = true
+        }
     }
     
 }

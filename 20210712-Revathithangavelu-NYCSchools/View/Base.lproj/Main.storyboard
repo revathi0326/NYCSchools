@@ -209,11 +209,18 @@
                             <constraint firstItem="IFC-kr-cGb" firstAttribute="leading" secondItem="gXl-Rk-HzK" secondAttribute="leading" id="dXn-Ig-8pt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bsS-l5-nqR"/>
+                    <navigationItem key="navigationItem" id="bsS-l5-nqR">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="star" catalog="system" id="iLc-wJ-gM9">
+                            <connections>
+                                <action selector="addSchoolToFavorites:" destination="zWD-Ee-4dR" id="wce-is-Ed3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="contactsView" destination="zqf-fr-9UY" id="jms-Nf-iUx"/>
                         <outlet property="criticalReadingAvgScoreLabel" destination="kdV-N6-09T" id="0Yu-uG-hhv"/>
                         <outlet property="emailLabel" destination="k4H-Ay-Eoz" id="s3n-if-UQO"/>
+                        <outlet property="favoriteBarButton" destination="iLc-wJ-gM9" id="Q6q-ka-qJZ"/>
                         <outlet property="mathAvgScoreLabel" destination="Rht-m0-7k6" id="mdu-kl-DgJ"/>
                         <outlet property="numberOfSATTestTakerslabel" destination="oN5-r7-4pq" id="4Jo-Af-d8v"/>
                         <outlet property="overViewLabel" destination="oUG-ta-vRK" id="Tbd-sO-IBD"/>
@@ -273,6 +280,7 @@
     <resources>
         <image name="mail" catalog="system" width="128" height="93"/>
         <image name="phone" catalog="system" width="128" height="115"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
