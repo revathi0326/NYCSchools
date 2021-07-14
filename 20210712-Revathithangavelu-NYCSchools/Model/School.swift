@@ -14,6 +14,9 @@ struct School {
     let phoneNumber: String?
     let email: String?
     let website: String?
+    let address: String?
+    let latitude: String?
+    let longitude: String?
     var testTakersCount: String?
     var reading_avg_score: String?
     var math_avg_score: String?

@@ -8,6 +8,8 @@
 //TODO: - # enable paging for the table data instead of fetching entire school list
 
 import UIKit
+import MapKit
+import Foundation
 
 // This viewcontroller shows the list of NYC schools fetching from the server.
 
@@ -16,6 +18,7 @@ class SchoolListViewController: UIViewController{
     //MARK: -  instance variables and iboutlet declarations
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var noItemsLabel: UILabel!
     
     var nycSchoolsList = [School]() // array containing list of schools
     var filteredSchools = [School]() // array used when searching schools
@@ -33,6 +36,9 @@ class SchoolListViewController: UIViewController{
         tableView.dataSource = self
         tableView.delegate = self
         title = K.appName
+        noItemsLabel.backgroundColor = UIColor.white
+        tableView.backgroundView = noItemsLabel
+        
         // registering tableview cell
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
         schoolDataManager.delegate = self
@@ -46,11 +52,13 @@ class SchoolListViewController: UIViewController{
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = K.searchPlaceholder
         navigationItem.searchController = searchController
-        definesPresentationContext = true
+        searchController.searchBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+         definesPresentationContext = true
     }
     
     func loadSchoolList() {
         // fetching highschool list
+        noItemsLabel.text = "Loading school list..."
         schoolDataManager.fetchNYCHighSchoolList()
     }
     
@@ -86,6 +94,23 @@ class SchoolListViewController: UIViewController{
     var isFiltering: Bool {
         return searchController.isActive && !isSearchBarEmpty
     }
+    
+    @objc func openAddressInMapApp(_ sender: UIButton){
+        var selectedSchool:School
+        if isFiltering {
+            selectedSchool = filteredSchools[sender.tag]
+        }else{
+            selectedSchool = nycSchoolsList[sender.tag]
+        }
+         
+        if  let latitude = Double(selectedSchool.latitude!), let longitude = Double(selectedSchool.longitude!){
+            let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+            let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))
+            mapItem.name = "\(selectedSchool.schoolName!)"
+            mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+        }
+       
+    }
 }
 
 //MARK: - TableViewDataSource methods
@@ -109,8 +134,19 @@ extension SchoolListViewController: UITableViewDataSource {
         }else{
             school = nycSchoolsList[indexPath.row]
         }
+        
+//        let greeting = "Hi there! It's nice to meet you! 👋"
+//        let endOfSentence = greeting.firstIndex(of: "!")!
+//        let firstSentence = greeting[...endOfSentence]
+        
+        let address = school.address!
+        let endOfSentence = address.firstIndex(of: "(")!
+        let firstSentence = address[..<endOfSentence]
+        
+        cell.addressLabel.text = String(firstSentence)
+        cell.addressButton.tag = indexPath.row
+        cell.addressButton.addTarget(self, action: #selector(self.openAddressInMapApp(_:)), for: .touchUpInside)
         cell.schoolNameLabel.text = school.schoolName
-        cell.accessoryType = .disclosureIndicator
         return cell
     }
 }
@@ -132,6 +168,7 @@ extension SchoolListViewController: UITableViewDelegate {
 extension SchoolListViewController: SchoolDataManagerDelegate {
     func didUpdateSchoolList(schoolList: [School]) {
         DispatchQueue.main.async {
+            self.noItemsLabel.text = ""
             self.nycSchoolsList.append(contentsOf: schoolList)
             self.tableView.reloadData()
         }
@@ -142,7 +179,9 @@ extension SchoolListViewController: SchoolDataManagerDelegate {
     }
     
     func didFailWithError(_ error: Error) {
-        
+        DispatchQueue.main.async {
+            self.noItemsLabel.text = error.localizedDescription
+        }
     }
 }
 

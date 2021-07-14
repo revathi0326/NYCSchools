@@ -4,34 +4,66 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ReusableCell" id="KGk-i7-Jjw" customClass="SchoolListTableViewCell" customModule="_0210712_Revathithangavelu_NYCSchools" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="179" id="KGk-i7-Jjw" customClass="SchoolListTableViewCell" customModule="_0210712_Revathithangavelu_NYCSchools" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="179"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="371" height="179"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="tXL-YA-AOZ">
-                        <rect key="frame" x="10" y="0.0" width="300" height="50"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYS-og-JXs">
+                        <rect key="frame" x="5" y="5" width="361" height="169"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="grd-sl-fDe">
+                                <rect key="frame" x="0.0" y="0.0" width="361" height="169"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School Name" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="tXL-YA-AOZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="49.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" red="0.1155863479" green="0.74861985450000001" blue="0.84172576669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="p1f-jP-0mq">
+                                        <rect key="frame" x="180.5" y="59.5" width="0.0" height="50"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPJ-AS-Mpa">
+                                        <rect key="frame" x="0.0" y="119.5" width="361" height="49.5"/>
+                                        <color key="backgroundColor" red="0.71764705880000002" green="0.86964930256860129" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="Open in Maps">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tXL-YA-AOZ" secondAttribute="trailing" id="9iv-XF-GL8"/>
+                                    <constraint firstAttribute="trailing" secondItem="dPJ-AS-Mpa" secondAttribute="trailing" id="Fzi-L5-8Ch"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.71764705882352942" green="0.71764705882352942" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="50" id="iEA-Um-zmv"/>
+                            <constraint firstItem="grd-sl-fDe" firstAttribute="top" secondItem="EYS-og-JXs" secondAttribute="top" id="4XG-Vh-H7t"/>
+                            <constraint firstAttribute="trailing" secondItem="grd-sl-fDe" secondAttribute="trailing" id="6Q9-cJ-5UT"/>
+                            <constraint firstItem="grd-sl-fDe" firstAttribute="leading" secondItem="EYS-og-JXs" secondAttribute="leading" id="mTW-qc-B3V"/>
+                            <constraint firstAttribute="bottom" secondItem="grd-sl-fDe" secondAttribute="bottom" id="rUp-1P-Lph"/>
                         </constraints>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                        <color key="textColor" systemColor="systemTealColor"/>
-                        <color key="highlightedColor" red="0.1155863479" green="0.74861985450000001" blue="0.84172576669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </label>
+                    </view>
                 </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="backgroundColor" red="1" green="0.91065377000000003" blue="0.8388803601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="tXL-YA-AOZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6x9-JA-uxE"/>
-                    <constraint firstAttribute="trailing" secondItem="tXL-YA-AOZ" secondAttribute="trailing" constant="10" id="EgL-bJ-o2y"/>
-                    <constraint firstItem="tXL-YA-AOZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="iix-go-KvF"/>
+                    <constraint firstAttribute="trailing" secondItem="EYS-og-JXs" secondAttribute="trailing" constant="5" id="7cj-Zo-m5p"/>
+                    <constraint firstItem="EYS-og-JXs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="EMC-yU-ngA"/>
+                    <constraint firstItem="EYS-og-JXs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Lxy-Ya-vbU"/>
+                    <constraint firstAttribute="bottom" secondItem="EYS-og-JXs" secondAttribute="bottom" constant="5" id="qBz-49-PkW"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -39,14 +71,12 @@
             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <inset key="separatorInset" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
+                <outlet property="addressButton" destination="dPJ-AS-Mpa" id="5km-DL-8NL"/>
+                <outlet property="addressLabel" destination="p1f-jP-0mq" id="MbP-ZK-77b"/>
+                <outlet property="cellBackgroundView" destination="EYS-og-JXs" id="aNz-Ak-52X"/>
                 <outlet property="schoolNameLabel" destination="tXL-YA-AOZ" id="vRX-Ya-Zwr"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="28.794642857142854"/>
+            <point key="canvasLocation" x="174.63768115942031" y="73.995535714285708"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

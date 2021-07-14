@@ -11,6 +11,8 @@ struct K {
     static let appName = "NYC Schools"
     static let cellIdentifier = "ReusableCell"
     static let cellNibName = "SchoolListTableViewCell"
+    static let favoriteCellNibName = "FavoriteSchoolListTableViewCell"
+    static let favoriteCellIdentifier = "ReusableFavoriteCell"
     static let appToken = "TpXpMjh83hKelKE0SIPpFpTPr"
     static let showDetailsSegue = "SchoolDetailSegue"
     static let favoriteSchoolDetailSegue = "FavoriteSchoolDetailSegue"

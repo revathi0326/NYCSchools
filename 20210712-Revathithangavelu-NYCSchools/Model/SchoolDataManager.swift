@@ -74,8 +74,11 @@ struct SchoolDataManager {
                 let phone = decodedData[schoolIndex].phoneNumber ?? ""
                 let website = decodedData[schoolIndex].website ?? ""
                 let email = decodedData[schoolIndex].schoolEmail ?? ""
+                let latitude = decodedData[schoolIndex].latitude ?? ""
+                let longitude = decodedData[schoolIndex].longitude ?? ""
+                let address = decodedData[schoolIndex].location ?? ""
                 
-                let school = School(schoolName: schoolName, overview: overview, dbn: dbn, phoneNumber: phone, email:email ,website: website, testTakersCount: "", reading_avg_score: "",math_avg_score: "",writing_avg_score: "")
+                let school = School(schoolName: schoolName, overview: overview, dbn: dbn, phoneNumber: phone, email:email ,website: website, address: address, latitude: latitude,longitude: longitude,testTakersCount: "",reading_avg_score: latitude,math_avg_score:longitude,writing_avg_score: address)
                 schoolList.append(school)
                 schoolIndex+=1
             }

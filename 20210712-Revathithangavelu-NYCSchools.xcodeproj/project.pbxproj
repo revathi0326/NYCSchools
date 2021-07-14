@@ -24,6 +24,8 @@
 		F88835A0269D2EC300AA3ABC /* SchoolListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F888359F269D2EC300AA3ABC /* SchoolListViewController.swift */; };
 		F88835A3269D2ED800AA3ABC /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88835A2269D2ED800AA3ABC /* FavoritesViewController.swift */; };
 		F88835AB269D48B700AA3ABC /* SchoolDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88835AA269D48B700AA3ABC /* SchoolDataManager.swift */; };
+		F8F6089D269EB03E00263085 /* FavoriteSchoolListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F6089B269EB03E00263085 /* FavoriteSchoolListTableViewCell.swift */; };
+		F8F6089E269EB03E00263085 /* FavoriteSchoolListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8F6089C269EB03E00263085 /* FavoriteSchoolListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		F888359F269D2EC300AA3ABC /* SchoolListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolListViewController.swift; sourceTree = "<group>"; };
 		F88835A2269D2ED800AA3ABC /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		F88835AA269D48B700AA3ABC /* SchoolDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDataManager.swift; sourceTree = "<group>"; };
+		F8F6089B269EB03E00263085 /* FavoriteSchoolListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSchoolListTableViewCell.swift; sourceTree = "<group>"; };
+		F8F6089C269EB03E00263085 /* FavoriteSchoolListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteSchoolListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 				F888358C269D2DC500AA3ABC /* Main.storyboard */,
 				F8400762269D5F8100771177 /* SchoolListTableViewCell.swift */,
 				F8400763269D5F8100771177 /* SchoolListTableViewCell.xib */,
+				F8F6089B269EB03E00263085 /* FavoriteSchoolListTableViewCell.swift */,
+				F8F6089C269EB03E00263085 /* FavoriteSchoolListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8883596269D2DC800AA3ABC /* LaunchScreen.storyboard in Resources */,
+				F8F6089E269EB03E00263085 /* FavoriteSchoolListTableViewCell.xib in Resources */,
 				F8883593269D2DC800AA3ABC /* Assets.xcassets in Resources */,
 				F888358E269D2DC500AA3ABC /* Main.storyboard in Resources */,
 				F8400765269D5F8100771177 /* SchoolListTableViewCell.xib in Resources */,
@@ -198,6 +205,7 @@
 				F8883587269D2DC500AA3ABC /* AppDelegate.swift in Sources */,
 				F88835AB269D48B700AA3ABC /* SchoolDataManager.swift in Sources */,
 				F840075A269D4BD200771177 /* SchoolData.swift in Sources */,
+				F8F6089D269EB03E00263085 /* FavoriteSchoolListTableViewCell.swift in Sources */,
 				F8883589269D2DC500AA3ABC /* SceneDelegate.swift in Sources */,
 				F8883591269D2DC500AA3ABC /* _0210712_Revathithangavelu_NYCSchools.xcdatamodeld in Sources */,
 				F88835A3269D2ED800AA3ABC /* FavoritesViewController.swift in Sources */,

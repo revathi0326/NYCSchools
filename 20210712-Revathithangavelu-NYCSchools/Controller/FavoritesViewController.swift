@@ -30,7 +30,7 @@ class FavoritesViewController: UIViewController {
         noItemsLabel.backgroundColor = UIColor.white
         tableView.backgroundView = noItemsLabel
        
-        tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
+        tableView.register(UINib(nibName: K.favoriteCellNibName, bundle: nil), forCellReuseIdentifier: K.favoriteCellIdentifier)
        
         // Do any additional setup after loading the view.
     }
@@ -81,9 +81,8 @@ extension FavoritesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let school = schools[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! SchoolListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier:K.favoriteCellIdentifier, for: indexPath) as! FavoriteSchoolListTableViewCell
        cell.schoolNameLabel.text = school.value(forKeyPath: K.DBStore.schoolName) as? String
-        cell.accessoryType = .disclosureIndicator
         return cell
     }
 }
