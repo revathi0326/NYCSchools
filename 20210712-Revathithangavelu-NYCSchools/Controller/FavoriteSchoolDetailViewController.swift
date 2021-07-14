@@ -85,43 +85,4 @@ class FavoriteSchoolDetailViewController: UIViewController {
         }
         
     }
-    
-//     func toggleFavorites(_ barButtonItem:UIBarButtonItem) {
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-//            return
-//        }
-//        let managedContext = appDelegate.persistentContainer.viewContext
-//        if isFavorite {
-//            favoriteBarButton.image = UIImage(systemName: "star")
-//
-//            let schoolDBN = school!.value(forKeyPath: K.DBStore.dbn) as! String
-//            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: K.DBStore.entityName)
-//            fetchRequest.predicate = NSPredicate(format: "\(K.DBStore.dbn) == %@", schoolDBN)
-//            do {
-//                var schoolToBeDeleted:[NSManagedObject] = []
-//                schoolToBeDeleted = try managedContext.fetch(fetchRequest) as! [NSManagedObject]
-//                managedContext.delete(schoolToBeDeleted[0])
-//                do {
-//                    try managedContext.save()
-//                    print("sucessfully deleted")
-//                    self.navigationController?.popToRootViewController(animated: true)
-//                } catch let error as NSError {
-//                    print("Could not delete. \(error), \(error.userInfo)")
-//                }
-//            } catch let error as NSError {
-//                print("Could not fetch. \(error), \(error.userInfo)")
-//            }
-//
-//        }else{
-//            favoriteBarButton.image = UIImage(systemName: "star.fill")
-//            managedContext.insert(school!)
-//            do {
-//                try managedContext.save()
-//                print("sucessfully saved")
-//            } catch let error as NSError {
-//                print("Could not save. \(error), \(error.userInfo)")
-//            }
-//        }
-//        isFavorite = !isFavorite
-//    }
 }

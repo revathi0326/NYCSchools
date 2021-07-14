@@ -132,7 +132,5 @@ struct SchoolDataManager {
             return nil
         }
     }
-    
-    
 }
 
