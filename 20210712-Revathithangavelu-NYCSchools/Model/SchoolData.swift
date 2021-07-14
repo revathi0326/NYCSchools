@@ -18,6 +18,7 @@ import Foundation
 //}
 
 struct SchoolData: Codable {
+    //TODO: remove unwanted fields
     let dbn, schoolName: String?
     let buildingCode, location, phoneNumber, faxNumber: String?
     let schoolEmail, website, subway: String?

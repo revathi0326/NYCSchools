@@ -92,7 +92,7 @@ extension SchoolListViewController: UITableViewDataSource {
             school = nycSchoolsList[indexPath.row]
         }
         cell.schoolNameLabel.text = school.schoolName
-        
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
 }

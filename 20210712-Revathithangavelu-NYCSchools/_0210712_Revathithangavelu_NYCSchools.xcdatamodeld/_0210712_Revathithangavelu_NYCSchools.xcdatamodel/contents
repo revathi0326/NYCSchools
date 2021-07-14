@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SchoolDetails" representedClassName="SchoolDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="avgMathScore" optional="YES" attributeType="String"/>
+        <attribute name="avgReadingScore" optional="YES" attributeType="String"/>
+        <attribute name="avgWritingScore" optional="YES" attributeType="String"/>
+        <attribute name="dbn" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="overview" optional="YES" attributeType="String"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String"/>
+        <attribute name="schoolName" optional="YES" attributeType="String"/>
+        <attribute name="testTakersCount" optional="YES" attributeType="String"/>
+        <attribute name="website" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="SchoolDetails" positionX="-63" positionY="-18" width="128" height="194"/>
+    </elements>
 </model>
