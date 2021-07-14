@@ -17,7 +17,7 @@ class SchoolListTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        //cellBackgroundView.layer.cornerRadius = 25
+        cellBackgroundView.layer.cornerRadius = 15
        
     }
 

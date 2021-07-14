@@ -15,19 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NYC High Schools" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKs-v9-Rmn">
-                                <rect key="frame" x="39" y="424" width="336" height="48"/>
-                                <color key="backgroundColor" red="0.41923981900000001" green="0.44056099650000002" blue="0.36146581169999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenImage" translatesAutoresizingMaskIntoConstraints="NO" id="DuA-E8-9UA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.71764705880000002" green="0.71764705880000002" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="sKs-v9-Rmn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NIs-Yf-VwB"/>
-                            <constraint firstItem="sKs-v9-Rmn" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="pY4-gE-tB5"/>
+                            <constraint firstAttribute="bottom" secondItem="DuA-E8-9UA" secondAttribute="bottom" id="4kt-Xm-inv"/>
+                            <constraint firstItem="DuA-E8-9UA" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="I01-sa-fxf"/>
+                            <constraint firstItem="DuA-E8-9UA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UcT-lF-Ik9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DuA-E8-9UA" secondAttribute="trailing" id="gs3-98-UvV"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,4 +34,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launchScreenImage" width="400" height="500"/>
+    </resources>
 </document>
