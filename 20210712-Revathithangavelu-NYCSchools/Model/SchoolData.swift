@@ -7,18 +7,8 @@
 
 import Foundation
 
-//struct SchoolData: Codable {
-//    let dbn: String
-//    let school_name: String
-//    let overview_paragraph: String
-//    let phone_number: String
-//    let school_email: String
-//    let website: String
-//
-//}
-
 struct SchoolData: Codable {
-    //TODO: remove unwanted fields
+    //TODO: remove unused fields
     let dbn, schoolName: String?
     let buildingCode, location, phoneNumber, faxNumber: String?
     let schoolEmail, website, subway: String?

@@ -14,7 +14,7 @@ struct K {
     static let appToken = "TpXpMjh83hKelKE0SIPpFpTPr"
     static let showDetailsSegue = "SchoolDetailSegue"
     static let favoriteSchoolDetailSegue = "FavoriteSchoolDetailSegue"
-    
+    static let searchPlaceholder = "Search School"
     
     struct DBStore {
         static let entityName = "SchoolDetails"

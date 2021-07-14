@@ -8,8 +8,8 @@
 import Foundation
 
 struct School {
-    let schoolName: String
-    let overview: String
+    let schoolName: String?
+    let overview: String?
     let dbn: String
     let phoneNumber: String?
     let email: String?

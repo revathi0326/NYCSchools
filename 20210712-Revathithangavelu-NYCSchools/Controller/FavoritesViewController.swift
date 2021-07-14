@@ -5,15 +5,22 @@
 //  Created by Revathi on 12/07/21.
 //
 
+//This viewcontroller  shows the list of schools liked by the user for later reference
+//TODO: - #Implement search functionality
+
 import UIKit
 import CoreData
 
 class FavoritesViewController: UIViewController {
+    //MARK: -  instance variables and iboutlet declarations
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noItemsLabel: UILabel!
     
     var indexPathForSelectedSchool : IndexPath?
     var schools: [NSManagedObject] = [ ]
+    
+    //MARK: -  basic functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,15 +38,6 @@ class FavoritesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         title = "Favorites"
         fetchFavoriteSchoolsFromDB()
-        print("view will appear called")
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == K.favoriteSchoolDetailSegue {
-            let showDetailsViewController = segue.destination as! FavoriteSchoolDetailViewController
-            showDetailsViewController.school = schools[indexPathForSelectedSchool!.row]
-           
-        }
     }
     
     func fetchFavoriteSchoolsFromDB() {
@@ -57,8 +55,19 @@ class FavoritesViewController: UIViewController {
             }
             tableView.reloadData()
          } catch let error as NSError {
+            //TODO: - #Need to display some user friendly info
             print("Could not fetch. \(error), \(error.userInfo)")
          }
+    }
+    
+    //MARK: - Navigationcontroller segues
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.favoriteSchoolDetailSegue {
+            let showDetailsViewController = segue.destination as! FavoriteSchoolDetailViewController
+            showDetailsViewController.school = schools[indexPathForSelectedSchool!.row]
+           
+        }
     }
 }
 
